@@ -16,11 +16,11 @@ int main (void)
 
 	while(1)
 	{
+		int i = 0;
 		write(1, "$ ", 2);
 		argv =  malloc(sizeof(char*) * 1024);
 		n_chars = getline(&buffer, &len, stdin);
 		token = strtok(buffer, " \t\n");
-		int i = 0;
 		for(; token; i++)
 		{
 			argv[i] = token;
